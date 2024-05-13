@@ -7,4 +7,4 @@ function answerValidator(actualAnswer, expectedAnswer){
     }
 }
 
-export const answerValidator;
+export default answerValidator;

@@ -1,0 +1,55 @@
+A tree is an undirected graph with no cycles
+Equivalently, a tree  it is a connected graph with N nodes and N-1 edges
+
+Real World examples: 
+1)teams herirachy
+2)every webpage is tree out as an HTML DOM structure
+
+How to Store undirected trees::
+1) Start by labelling the tree node from [0,n)
+
+Edge List storage representation:
+can be represented/stored easily by edge representation
+cons: lacks the structure to query the neighbours of a particular node (kinda makes sense) => 
+
+Solutiion:: Adjaceny List Represenation
+ every node stores list of neighbor nodes
+ 0-> [2,3,4]
+
+Adjacencey matrix representation:
+
+have a matrix by nodes*nodes filled with 0's  and represent edge with 1 
+Need lot of memory, in case the nodes are more.
+O(n*2) space and we only use 2(n-1) of the matrix cells to represent the edges
+
+Rooted Trees::
+Tress which have designated root node
+
+Binary Tree (BT): part of Rooted Tree , but every node has atmost two children
+BST: Related to binary trees but should satisfy the BST invaraint:: which states for evrry node 
+x :::
+x.left.value<= x.value <= x.right.value
+
+Storing Roooted Trees:::
+In practise, you will have always maintain a pointer reference to the root node so that you can access the tree and its contents
+Each node also has access to list of all its children.
+It is also sometimes useful to maintain apointer to node's parent node effectively making edges bidirectional
+This is not necsessary, we can acess node's parent on a recursive function's callback
+
+Flattened Array: (works for any n-array tree):
+If it is a binary tree, you can store it in the flattened array
+1) Each node has assigned index position based on where it is present in the tree.
+2) Even nodes wich are curretly not present in the tree have an index (becasue they can be mapped back to unique position in the index tree.
+
+The root node is always at the index 0
+and children of the current node i are acessed relative to the position i
+
+Let i be the index of the current node
+left node = 2*i+1
+right node = 2*i+2
+
+Parent of node i = FLOOR((i-1)/2)
+
+
+
+

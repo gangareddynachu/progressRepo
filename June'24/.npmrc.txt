@@ -1,0 +1,55 @@
+What is .npmrc file?
+The .npmrc is a configuration file used by Node packet Manager (NPM) command line tool.
+It allows you to customise various settings related to how npm behaves while managing packaging ad dependecnies of your node.js projects.
+
+It is placed in the project's root directory and contain various configuration options
+
+We can define:
+1) Registry confirmation:
+registry=https://registry.npmjs.org/
+
+2) Scoped Package configuration:
+can set the configuration options for packages that start with @scope
+
+3) Authenticaion:
+Store Authentication tokens for private registries or servies
+
+4)Proxy Configuration:
+If you are behind a corporate proxy, you can configure npm to work through the proxy by setting proxy related options in the .npmrc file
+
+5)Cache control:
+you can control how npm caches packages by specifyng cache related settings
+
+6)Gloabl and Local configuration:
+can have different .npmrc files for global and local configration
+Global settings are applied to all projects on your system
+while local settings are specific to projects directory
+
+7) Package installation behavior:
+configre .npmrc to save packages as dependencies and devDependeves by default when you run npm install
+You can also control whether npm automatically saves your packages to package.json file
+
+
+
+
+
+.npmrc
+
+
+save=true (To always save dependencies to package.json:)
+save-exact=true (To always save dev dependencies to package.json:)
+registry=https://registry.npmjs.org/ (To set a custom registry for npm packages:)
+strict-ssl=false (To disable strict SSL (not recommended, but sometimes necessary for internal registries with self-signed certificates):)
+package-lock=true (To ensure package-lock.json is always updated:)
+
+save-exact=true (To save the exact version of a package without using the caret (^) prefix)
+
+cache=/path/to/your/npm-cache (To specify a custom cache directory for npm:)
+
+proxy=http://proxy.company.com:8080
+https-proxy=http://proxy.company.com:8080 (To set proxy configurations if you are behind a proxy)
+
+prefix=/usr/local (Global settings for npm, such as the global installation prefix:)
+
+
+

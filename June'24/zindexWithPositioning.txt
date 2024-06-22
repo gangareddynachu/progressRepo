@@ -1,1 +1,7 @@
+Refer this article on how z-index uses stacked contexts: https://www.joshwcomeau.com/css/stacking-contexts/
+
+in general, z-index only works with positioned elements (elements that set position ) to something other than default 'static'
+But Flexbox adds an exception: flex children can use z-index even if they're statically-positioned
+
+
 

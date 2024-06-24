@@ -8,3 +8,14 @@ margin-block-end = margin-bottom
 
 forced-color-adjust ::: auto ( keeps user prefereed color/adjusts as per high contrast mode) 
 forced-color-adjust ::: none (keeps orignal color even in high contrast mode)
+
+
+body {
+  background-color: yellow;
+}
+@media screen and (min-width: 200px) { // When screen is less than or equal to 200px, then the background-color becomes lightblue, anything greater body tag color gets honoured
+  body {
+    background-color: lightblue;
+  }
+}
+

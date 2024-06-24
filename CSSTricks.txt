@@ -13,7 +13,7 @@ forced-color-adjust ::: none (keeps orignal color even in high contrast mode)
 body {
   background-color: yellow;
 }
-@media screen and (min-width: 200px) { // When screen is less than or equal to 200px, then the background-color becomes lightblue, anything greater body tag color gets honoured
+@media screen and (min-width: 200px) { // When screen is greater than or equal to 200px, then the background-color becomes lightblue, anything lesser body tag color gets honoured(since we have given min-width, max-width occurs viceversa)
   body {
     background-color: lightblue;
   }

@@ -1,0 +1,17 @@
+1) Static Type Checking => allows you to check and assign types to varaibles, parameters and function return values.
+2) Class-Based Objects => Unlike javascript prototype approach, we can have classes, and have access to public private protected modifiers
+3) Modularity
+4)ESe features
+5) Syntactical sugaring => syntax equivalent to that of java
+
+Typescript cannot be interpreted directly by the browser
+it needs to be compiled using Typescript transpiler/compiler (TSC)
+
+Typescript + Transpile/compile = javascript
+
+TypeScript Compiler (tsc)
+Written in TypeScript itself.
+Compiles .ts files to .js files.
+Installed as an NPM package (NodeJS).
+Supports ES6 syntax.
+

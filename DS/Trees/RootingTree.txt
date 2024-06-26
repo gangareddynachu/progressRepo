@@ -1,0 +1,30 @@
+Rooting a tree is like picking up a node and pointing all its children downwards.
+
+Rooting a tree psuedo code:
+
+//g is the graph/tree representated as an Adjacencey list with undirected edges.
+//If there is an undirected edge between (u,v) there is also an edge between (v,u)
+// rootId is the id of the node to root the tree from.
+
+class TreeNode:
+    int id;
+    TreeNode parent;
+    TreeNode[] children
+
+function rootTree(g,rootId=0):
+    root = TreeNode(rootId,null,[[]])
+    return buildTree(g,root,null)
+
+//build tree recursively depth first
+function buildTree(g,node,parent):
+    for(childId in g[node.id]):
+        // Avoid adding an edge pointing back to the parent
+        if parent!=null and childId == parent.id:
+            continue
+        child = TreeNode(childId,node,[])
+        node.children.add(child)
+        buildTree(g,child,node)
+    return node
+
+
+

@@ -1,0 +1,72 @@
+Problem 1:
+Leaf node sum:
+
+When dealing with the rooted trees you begin with having reference to the root node as a starting point for most algorithms.
+
+Two traversals:
+DFS
+BFS
+
+Pseudo code::
+
+Logic in own terms::
+1) Iterate taking the root as first element
+2) For each node, with the help of getChildNodes method, it returns children of that particular node
+3) See if the obtained children are leaf nodes by seeing verifying children length as 0
+
+funtion leafSum(node):
+    if(node == null):
+        return 0;
+    if isLeaf(node):
+        return node.getValue()
+    total = 0;
+    for child in node.getChildNodes():
+        total += leafSum(child);
+    return total;
+
+function isLeaf(node):
+    return node.getChildNodes().size() ==0
+
+
+Problem 2:
+Tree Height
+Find the height of the binary tree. The height of the tree is number of edges from root to the lowest leaf.
+
+Let h(x) be the height of the subtree rooted at node x.
+By this we can calculate height at every node..
+
+Leaf nodes dont have any height so
+h(leaf node) = 0; //base case
+
+h(x) = max(h(x.left),h(x.right))+1
+
+// for last node
+
+h(lastbutone) = max(h(leftleaf),h(rightleaf))+1
+h(lastbutone) = max(0,0)+1
+h(lastbutone) = 0+1 = 1
+
+
+Pesudo code::
+
+function treeHeight(node):
+    if node == null:
+        return -1
+    // Identify leaf nodes and return zero
+    if node.left ==null and node.right ==null:
+        return 0
+    
+    return max(treeHeight(node.left),treeHeight(node.right))+1
+
+
+We can also remove second condition, it works
+
+function treeHeight(node):
+    if node == null:
+        return -1
+    return max(treeHeight(node.left),treeHeight(node.right))+1
+
+Note: If we want height at each level, we can dynamically calculate and store the height at each node in result arr..(DP problem)
+
+
+

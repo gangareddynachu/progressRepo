@@ -1,0 +1,11 @@
+Lazy loading is a strategy to Identify resources as as non-blocking(critical) and load these only when needed.
+Its a way to shorten the critical rendering path which translates to reduced loading times.
+
+Loading attribute
+The loading attribute on an <img> element, or the loading attribute on an <iframe>, 
+can be used to instruct the browser to defer loading of images/iframes that are off-screen until 
+the user scrolls near them. This allows non-critical resources to load only if needed, potentially speeding up initial page loads and reducing network usage.
+
+<img loading="lazy" src="image.jpg" alt="..." />
+<iframe loading="lazy" src="video-player.html" title="..."></iframe>
+

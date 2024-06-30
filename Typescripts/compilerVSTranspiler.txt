@@ -1,0 +1,16 @@
+Compiler : takes source code written in one language and produce output file in some other language.
+  gcc is c compiler which takes the C code as input and produces binary executable (machine code ) as output.
+
+  Trannspilers:: transpilers are source-source compilers. They are like subset of compilers.
+  They take source as input and convert it to another source code file in some other language or a different version of the same language
+Output is understandable by human.
+
+
+If you think of layers of abstraction as this example:
+
+(1) CPU-level (actual logic gates on the CPU)
+(2) machine code
+(3) assembly code
+(4) [C/C++, JVM/bytecode]
+(5) [JavaScript, Python]
+A compiler goes to a lower level (lower number). A transpiler switches from one language (or version of a language) to another at the same number.
